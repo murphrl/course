@@ -33,7 +33,7 @@ public class Player {
 	}
 	
 	public void setPoints() {
-		
+		this.playerPoints = 0;   
 	}
 	
 	public int getSize() {

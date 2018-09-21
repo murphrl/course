@@ -18,13 +18,22 @@ public class Team implements Comparable<Team> {
 	private String teamName;
 	private int teamSize;
 	private int points;
-	//compare player points and teamName
-	//organize points, then number of players, then alpha
+	private int compare;
+	private int home;
+	private int away;
+	
 	
 	@Override
 	public int compareTo(Team o) {
-		// TODO Auto-generated method stub
-		return 0;
+		home = getPoints();
+		away = o.getPoints();
+		if (home > away) {
+			return home;
+		} else if (home < away) {
+			return away;
+		} else {
+			return 0;
+		}
 	}
 	
 	public Team(String name) {
@@ -35,12 +44,16 @@ public class Team implements Comparable<Team> {
 		return this.teamSize;
 	}
 	
-		public int getPoints() {
+	public int getPoints() {
 		return this.points;
 	}
 		
-	public List<Player> sort() {
-		//not sure
+	public List<Player> sort(List<Player> players) {
+		//compare player points and teamName
+		//organize points, then number of players, 
+		//then alphabetical
+		Player.sort(players);
+		return List<Player> player;
 	}
 		
 	public void addPlayer(Player player) {
